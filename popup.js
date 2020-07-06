@@ -1,3 +1,11 @@
+chrome.runtime.onMessage.addListener(function(request, sender) {
+  if (request.action == "getSource") {
+console.log("onMessage");
+    message.innerText = request.source;
+  }
+});
+
+
 function onWindowLoad() {
 
 	    var message = document.querySelector('#message');
